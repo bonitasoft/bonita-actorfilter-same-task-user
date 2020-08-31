@@ -10,7 +10,6 @@ import org.bonitasoft.engine.search.SearchResult;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import static java.util.Collections.unmodifiableList;
 import static org.bonitasoft.engine.bpm.flownode.ArchivedHumanTaskInstanceSearchDescriptor.*;
@@ -26,11 +25,9 @@ public class SameTaskUserActorFilter extends AbstractUserFilter {
 
     static final String USERTASK_NAME = "usertaskName";
 
-    private static final Logger LOGGER = Logger.getLogger(SameTaskUserActorFilter.class.getName());
-
     @Override
     public void validateInputParameters() throws ConnectorValidationException {
-        validateStringInputParameterIsNotNulOrEmpty("usertaskName");
+        validateStringInputParameterIsNotNulOrEmpty(USERTASK_NAME);
     }
 
     @Override
@@ -52,7 +49,7 @@ public class SameTaskUserActorFilter extends AbstractUserFilter {
         }
 
         final List<ArchivedHumanTaskInstance> tasks = searchResult.getResult();
-        final List<Long> userIds = new ArrayList<Long>(tasks.size());
+        final List<Long> userIds = new ArrayList<>(tasks.size());
         for (final ArchivedHumanTaskInstance archivedTask : tasks) {
             final long executorId = archivedTask.getExecutedBy();
             if (!userIds.contains(executorId)) {
