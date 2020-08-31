@@ -8,7 +8,7 @@
     <name>bonita-actorfilter-same-task-user</name>
     <packaging>jar</packaging>
 
-    <!--    <description>Bonita Actor Filter that filter users of an actor based on TODO !!!!</description>-->
+    <description>Bonita Actor Filter that filter users of an actor based on the user of a specific task</description>
 
     <url>https://www.bonitasoft.com</url>
 
@@ -241,10 +241,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
-            </plugin><plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-        </plugin>
+            </plugin>
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
@@ -318,7 +319,8 @@
         </repository>
     </distributionManagement>
     <scm>
-        <developerConnection>scm:git:git@github.com:bonitasoft/bonita-actorfilter-same-task-user.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:bonitasoft/bonita-actorfilter-same-task-user.git
+        </developerConnection>
         <connection>scm:git:git@github.com:bonitasoft/bonita-actorfilter-same-task-user.git</connection>
         <url>https://github.com/bonitasoft/bonita-actorfilter-same-task-user</url>
         <tag>HEAD</tag>
