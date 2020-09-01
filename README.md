@@ -4,7 +4,7 @@
 [![Maven Central](https://img.shields.io/maven-central/v/org.bonitasoft.actorfilter/bonita-actorfilter-same-task-user?color=orange&label=Maven%20Central)](https://search.maven.org/artifact/org.bonitasoft.actorfilter/bonita-actorfilter-same-task-user)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-yellow.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-Bonita Actor Filter that filter users of an actor based on the user of a specific task.
+Bonita Actor Filter that filter users of an actor based on the user of a specific task
 
 ## Build
 
